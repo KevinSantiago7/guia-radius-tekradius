@@ -113,7 +113,7 @@ Proyecto-RADIUS\herramientas
 Setup.exe
 ```
 
-**Evidencia recomendada:** tomar captura del archivo descargado y extraído.
+![ejecutar setup](capturas/02-ejecutar-setup.png)
 
 ---
 
