@@ -477,14 +477,14 @@ En PowerShell como administrador, ejecutar:
 ```powershell
 New-NetFirewallRule -DisplayName "Permitir RADIUS UDP 1812" -Direction Inbound -Protocol UDP -LocalPort 1812 -Action Allow
 ```
-
+![cliente-cel](capturas/1812.png)
 Opcionalmente, abrir también el puerto `1813`:
 
 ```powershell
 New-NetFirewallRule -DisplayName "Permitir RADIUS UDP 1813" -Direction Inbound -Protocol UDP -LocalPort 1813 -Action Allow
 ```
+![cliente-cel](capturas/1813.png)
 
----
 
 ## 13.5 Configurar la app RADIUS en el celular
 
