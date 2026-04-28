@@ -324,6 +324,7 @@ Ambos archivos deben quedar en la misma carpeta.
 
 ![archivos ntradiping](capturas/ntradping.png)
 
+
 ---
 
 # Paso 11: Realizar la prueba correcta con NTRadPing
