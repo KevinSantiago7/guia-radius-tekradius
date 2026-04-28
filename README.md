@@ -106,9 +106,7 @@ explorer "$env:USERPROFILE\Desktop\Proyecto-RADIUS"
 # Paso 2: Descargar TekRADIUS LT
 
 1. Abrir el enlace de descarga de TekRADIUS LT.
-| Programa | Enlace |
-|---|---|
-| TekRADIUS LT | [Descargar](https://drive.google.com/file/d/109W8xu_Pmqqwl8Kv9l31GhKeWijp_7EK/view?usp=sharing) |
+[Descargar](https://drive.google.com/file/d/109W8xu_Pmqqwl8Kv9l31GhKeWijp_7EK/view?usp=sharing) |
 2. Descargar el archivo comprimido.
 4. Guardarlo en la carpeta:
 
@@ -308,9 +306,7 @@ netstat -ano -p udp | findstr ":1813"
 # Paso 10: Descargar y preparar NTRadPing
 
 1. Abrir el enlace de descarga de NTRadPing.
-| Programa | Enlace |
-|---|---|
-| NTRadPing | [Descargar](https://drive.google.com/file/d/16Bg0l-koklsOB2lFg3iwMZRot9bm3rEf/view?usp=sharing) |
+ [Descargar](https://drive.google.com/file/d/16Bg0l-koklsOB2lFg3iwMZRot9bm3rEf/view?usp=sharing) |
 2. Descargar el archivo comprimido.
 3. Guardarlo en:
 
@@ -494,9 +490,7 @@ New-NetFirewallRule -DisplayName "Permitir RADIUS UDP 1813" -Direction Inbound -
 ## 13.5 Descargar la app RADIUS en el celular
 
 NOTA: Al instalar, puede salir que la app es dañiña, (es opcional), sin embargo, ya ha sido probada y no ha pasado nada
-| Programa | Enlace |
-|---|---|
-| App RADIUS para Android | [Descargar](https://drive.google.com/file/d/1Hh4-s9F50ep79cnJT78rcGjN1gNZOR-6/view?usp=sharing) |
+ [Descargar](https://drive.google.com/file/d/1Hh4-s9F50ep79cnJT78rcGjN1gNZOR-6/view?usp=sharing) |
 
 ## 13.6 Configurar la app RADIUS en el celular
 
