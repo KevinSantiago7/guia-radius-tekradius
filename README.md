@@ -430,12 +430,12 @@ Ajustes > Wi-Fi > Preferencias de WiFi> Direccion IP
 
 Buscar la IP del celular.
 
-![ip-cel](capturas/ip-cel.png)
+![ip-cel](capturas/ip-cel.jpeg)
 
 Ejemplo:
 
 ```text
-192.168.1.80
+192.168.1.3
 ```
 
 ---
