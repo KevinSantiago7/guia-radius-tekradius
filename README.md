@@ -1,102 +1,55 @@
-# Configuración de un servidor RADIUS en Windows 11 usando TekRADIUS LT
+# Guía paso a paso: Configuración de un servidor RADIUS en Windows 11 usando TekRADIUS LT
 
-## Descripción
+## 1. Descripción
 
-Este repositorio contiene una guía paso a paso para instalar, configurar y probar un servidor RADIUS en Windows 11 usando TekRADIUS LT.
+Esta guía explica cómo instalar, configurar y probar un servidor RADIUS en Windows 11 usando **TekRADIUS LT**.
 
-El proyecto fue realizado con el objetivo de explorar el proceso de configuración de un servidor RADIUS y documentarlo de forma clara para que otro estudiante pueda replicarlo durante una clase.
+El objetivo es que otro estudiante pueda seguir estos pasos durante una clase y comprobar que el servidor funciona correctamente mediante una prueba de autenticación.
 
-## Objetivo general
+---
 
-Configurar un servidor RADIUS en Windows 11 usando TekRADIUS LT, crear un cliente RADIUS local, registrar un usuario de prueba y validar la autenticación mediante una herramienta cliente.
+## 2. Objetivo de la práctica
 
-## Objetivos específicos
+Configurar un servidor RADIUS en Windows 11, crear un usuario de prueba y validar la autenticación usando una herramienta cliente llamada **NTRadPing**.
 
-- Instalar TekRADIUS LT en Windows 11.
-- Configurar un cliente RADIUS local.
-- Crear un usuario de prueba.
-- Iniciar el servicio TekRADIUSLT.
-- Probar autenticación con NTRadPing.
-- Realizar una prueba positiva con `Access-Accept`.
-- Realizar una prueba negativa con `Access-Reject`.
-- Documentar el proceso con capturas propias.
-- Publicar la guía en GitHub para que pueda ser replicada.
-- Incluir una prueba opcional desde celular Android.
+---
 
-## ¿Qué es RADIUS?
+## 3. ¿Qué es un servidor RADIUS?
 
 RADIUS significa **Remote Authentication Dial-In User Service**.
 
-Es un protocolo utilizado para autenticar, autorizar y registrar accesos de usuarios en redes. Un servidor RADIUS recibe una solicitud de autenticación, valida las credenciales y responde si el acceso debe ser permitido o rechazado.
-
-Las respuestas más importantes son:
+Un servidor RADIUS permite validar usuarios que intentan acceder a una red o servicio. El servidor recibe una solicitud con usuario y contraseña, revisa si los datos son correctos y responde con uno de estos resultados:
 
 ```text
 Access-Accept
 ```
 
-Indica que el usuario fue aceptado.
+Significa que el acceso fue permitido.
 
 ```text
 Access-Reject
 ```
 
-Indica que el usuario fue rechazado.
+Significa que el acceso fue rechazado.
 
-## ¿Para qué sirve un servidor RADIUS?
+---
 
-Un servidor RADIUS permite centralizar la autenticación de usuarios. En lugar de configurar usuarios directamente en cada equipo de red, los dispositivos consultan al servidor RADIUS para saber si un usuario puede acceder o no.
+## 4. Herramientas necesarias
 
-Se puede usar en escenarios como:
-
-- Redes Wi-Fi empresariales o universitarias.
-- VPN.
-- Switches administrables.
-- Firewalls.
-- Hotspots.
-- Control de acceso por usuario.
-- Autenticación 802.1X.
-
-## Escenario de práctica
-
-En esta práctica se configuró TekRADIUS LT en Windows 11 y se probó usando NTRadPing desde el mismo equipo.
-
-```text
-NTRadPing
-   ↓
-127.0.0.1:1812
-   ↓
-TekRADIUS LT
-   ↓
-Usuario estudiante1
-```
-
-También se incluye una prueba opcional desde celular Android usando una aplicación cliente RADIUS.
-
-```text
-Celular Android
-   ↓
-Red Wi-Fi
-   ↓
-PC Windows 11 con TekRADIUS LT
-   ↓
-Usuario estudiante1
-```
-
-## Herramientas utilizadas
-
-| Herramienta | Función |
+| Herramienta | Uso |
 |---|---|
-| Windows 11 | Sistema operativo usado para la práctica |
-| TekRADIUS LT | Servidor RADIUS para Windows |
-| NTRadPing | Herramienta cliente para probar autenticación RADIUS |
-| PowerShell | Verificación de servicio, carpetas, puertos y firewall |
-| GitHub | Publicación de la guía |
+| Windows 11 | Sistema operativo usado en la práctica |
+| TekRADIUS LT | Servidor RADIUS |
+| NTRadPing | Cliente de prueba RADIUS |
+| PowerShell | Ejecutar comandos de verificación |
 | Celular Android | Prueba opcional desde otro dispositivo |
+| GitHub | Publicación de la guía |
 
-## Links de descarga
+---
 
-Los instaladores utilizados en esta práctica estarán disponibles desde Google Drive.
+## 5. Links de descarga
+
+Los archivos necesarios estarán disponibles desde Google Drive.
 
 | Programa | Enlace |
 |---|---|
@@ -104,9 +57,11 @@ Los instaladores utilizados en esta práctica estarán disponibles desde Google 
 | NTRadPing | [Descargar desde Drive](PEGAR_AQUI_LINK_DE_NTRADPING) |
 | App RADIUS para Android | [Descargar desde Drive](PEGAR_AQUI_LINK_DE_APP_ANDROID) |
 
-> Nota: reemplazar los textos `PEGAR_AQUI_LINK...` por los enlaces reales de Google Drive.
+> Reemplazar `PEGAR_AQUI_LINK...` por los enlaces reales de Google Drive.
 
-## Datos usados en la práctica
+---
+
+## 6. Datos que se usarán en la práctica
 
 | Elemento | Valor |
 |---|---|
@@ -119,121 +74,243 @@ Los instaladores utilizados en esta práctica estarán disponibles desde Google 
 | Contraseña incorrecta | `mala123` |
 | Método de autenticación | `PAP` |
 
-## Estructura del repositorio
+---
 
-```text
-guia-radius-tekradius
-├── README.md
-├── docs
-│   └── guia-paso-a-paso.md
-├── capturas
-│   └── README.md
-├── evidencias
-│   └── README.md
-├── scripts
-│   ├── crear-estructura.ps1
-│   ├── verificar-servicio.ps1
-│   └── abrir-firewall-radius.ps1
-└── assets
-    └── img
-```
+# Paso 1: Crear la carpeta del proyecto
 
-## Resultado esperado
-
-Al realizar la prueba con el usuario correcto:
-
-```text
-Usuario: estudiante1
-Contraseña: Clase2026
-```
-
-El servidor debe responder:
-
-```text
-Access-Accept
-```
-
-Al realizar la prueba con contraseña incorrecta:
-
-```text
-Usuario: estudiante1
-Contraseña: mala123
-```
-
-El servidor debe responder:
-
-```text
-Access-Reject
-```
-
-## Evidencias recomendadas
-
-Durante la práctica se deben guardar capturas de:
-
-1. Creación de la carpeta del proyecto.
-2. Descarga de TekRADIUS LT.
-3. Instalación de TekRADIUS LT.
-4. Servicio TekRADIUSLT instalado.
-5. Cliente RADIUS creado.
-6. Usuario de prueba creado.
-7. Servicio TekRADIUSLT en estado `Running`.
-8. Puerto RADIUS `1812/UDP` activo.
-9. Prueba `Access-Accept`.
-10. Prueba `Access-Reject`.
-11. Configuración de logs o eventos.
-12. Prueba opcional desde celular.
-
-## Comandos principales usados
-
-### Crear carpeta de trabajo
+Abrir **PowerShell** y ejecutar:
 
 ```powershell
 mkdir "$env:USERPROFILE\Desktop\Proyecto-RADIUS"
 mkdir "$env:USERPROFILE\Desktop\Proyecto-RADIUS\capturas"
 mkdir "$env:USERPROFILE\Desktop\Proyecto-RADIUS\herramientas"
-mkdir "$env:USERPROFILE\Desktop\Proyecto-RADIUS\guia"
 mkdir "$env:USERPROFILE\Desktop\Proyecto-RADIUS\evidencias"
 ```
 
-### Verificar servicio TekRADIUS
+Verificar que las carpetas fueron creadas:
+
+```powershell
+dir "$env:USERPROFILE\Desktop\Proyecto-RADIUS"
+```
+
+Abrir la carpeta:
+
+```powershell
+explorer "$env:USERPROFILE\Desktop\Proyecto-RADIUS"
+```
+
+**Evidencia recomendada:** tomar captura de la carpeta creada.
+
+---
+
+# Paso 2: Descargar TekRADIUS LT
+
+1. Abrir el enlace de descarga de TekRADIUS LT desde Drive.
+2. Descargar el archivo comprimido.
+3. Guardarlo en la carpeta:
+
+```text
+Proyecto-RADIUS\herramientas
+```
+
+4. Extraer el archivo `.zip`.
+5. Buscar el archivo:
+
+```text
+Setup.exe
+```
+
+**Evidencia recomendada:** tomar captura del archivo descargado y extraído.
+
+---
+
+# Paso 3: Instalar TekRADIUS LT
+
+1. Clic derecho sobre `Setup.exe`.
+2. Seleccionar **Ejecutar como administrador**.
+3. Clic en **Next**.
+4. Aceptar las opciones por defecto.
+5. Finalizar la instalación.
+
+**Evidencia recomendada:** tomar captura del instalador.
+
+---
+
+# Paso 4: Verificar que TekRADIUS fue instalado
+
+Abrir **PowerShell como administrador** y ejecutar:
 
 ```powershell
 Get-Service *Tek*
 ```
 
-### Iniciar servicio TekRADIUS
+Resultado esperado:
+
+```text
+Status   Name          DisplayName
+------   ----          -----------
+Stopped  TekRADIUSLT   TekRADIUSLT
+```
+
+Si aparece `TekRADIUSLT`, significa que el servicio fue instalado correctamente.
+
+**Evidencia recomendada:** tomar captura del resultado.
+
+---
+
+# Paso 5: Abrir TekRADIUS Manager
+
+1. Abrir el menú de inicio.
+2. Buscar:
+
+```text
+TekRADIUS LT Manager
+```
+
+3. Ejecutarlo como administrador.
+
+---
+
+# Paso 6: Crear el cliente RADIUS local
+
+Dentro de **TekRADIUS Manager**, ir a la pestaña:
+
+```text
+Clients
+```
+
+Completar los campos así:
+
+| Campo | Valor |
+|---|---|
+| NAS | `127.0.0.1` |
+| Secret | `ClaseRadius123` |
+| Username Part | Dejar vacío |
+| Label | `Local` |
+| Description | `Cliente local de prueba` |
+| Vendor | `ietf` |
+| Enabled | `Yes` |
+| CoA Enabled | `No` |
+
+Luego hacer clic en el botón verde **+** para agregar el cliente.
+
+**Evidencia recomendada:** tomar captura del cliente creado.
+
+---
+
+# Paso 7: Crear el usuario de prueba
+
+Ir a la pestaña:
+
+```text
+Users
+```
+
+En el campo de usuario escribir:
+
+```text
+estudiante1
+```
+
+Dejar el grupo como:
+
+```text
+Default
+```
+
+Hacer clic en el botón verde **+** para crear el usuario.
+
+Luego seleccionar el usuario `estudiante1`.
+
+En la parte derecha, agregar el atributo de contraseña:
+
+| Campo | Valor |
+|---|---|
+| Type | `Check` |
+| Attribute | `User-Password` |
+| Value | `Clase2026` |
+
+Hacer clic en el botón verde **+** para guardar el atributo.
+
+**Evidencia recomendada:** tomar captura del usuario creado.
+
+---
+
+# Paso 8: Iniciar el servicio TekRADIUS
+
+Abrir **PowerShell como administrador** y ejecutar:
 
 ```powershell
 Start-Service TekRADIUSLT
 ```
 
-### Confirmar que el servicio está activo
+Luego verificar el estado:
 
 ```powershell
 Get-Service TekRADIUSLT
 ```
 
-### Verificar puerto RADIUS
+Resultado esperado:
+
+```text
+Status   Name          DisplayName
+------   ----          -----------
+Running  TekRADIUSLT   TekRADIUSLT
+```
+
+**Evidencia recomendada:** tomar captura del servicio en estado `Running`.
+
+---
+
+# Paso 9: Verificar el puerto RADIUS
+
+Ejecutar en PowerShell:
 
 ```powershell
 netstat -ano -p udp | findstr ":1812"
 ```
 
-### Abrir puerto 1812 en firewall de Windows
+El puerto `1812/UDP` se usa para autenticación RADIUS.
+
+También se puede verificar el puerto de accounting:
 
 ```powershell
-New-NetFirewallRule -DisplayName "Permitir RADIUS UDP 1812" -Direction Inbound -Protocol UDP -LocalPort 1812 -Action Allow
+netstat -ano -p udp | findstr ":1813"
 ```
 
-### Abrir puerto 1813 en firewall de Windows
+**Evidencia recomendada:** tomar captura del puerto activo.
 
-```powershell
-New-NetFirewallRule -DisplayName "Permitir RADIUS UDP 1813" -Direction Inbound -Protocol UDP -LocalPort 1813 -Action Allow
+---
+
+# Paso 10: Descargar y preparar NTRadPing
+
+1. Abrir el enlace de descarga de NTRadPing desde Drive.
+2. Descargar el archivo comprimido.
+3. Guardarlo en:
+
+```text
+Proyecto-RADIUS\herramientas
 ```
 
-## Prueba principal con NTRadPing
+4. Extraer el archivo.
+5. Verificar que existan estos archivos:
 
-La prueba principal se realiza con NTRadPing usando los siguientes datos:
+```text
+NTRADPING.EXE
+RADDICT.DAT
+```
+
+Ambos archivos deben quedar en la misma carpeta.
+
+**Evidencia recomendada:** tomar captura de los archivos extraídos.
+
+---
+
+# Paso 11: Realizar la prueba correcta con NTRadPing
+
+Ejecutar `NTRADPING.EXE` como administrador.
+
+Configurar los campos así:
 
 | Campo | Valor |
 |---|---|
@@ -245,18 +322,38 @@ La prueba principal se realiza con NTRadPing usando los siguientes datos:
 | CHAP | Desmarcado |
 | Request type | `Authentication Request` |
 
+Luego hacer clic en:
+
+```text
+Send
+```
+
 Resultado esperado:
 
 ```text
 Access-Accept
 ```
 
-## Prueba negativa
+Esto significa que el servidor RADIUS aceptó el usuario y la contraseña.
 
-Para comprobar que el servidor no acepta cualquier contraseña, se cambia únicamente la contraseña:
+**Evidencia recomendada:** tomar captura del resultado `Access-Accept`.
+
+---
+
+# Paso 12: Realizar la prueba incorrecta
+
+En NTRadPing, cambiar solamente la contraseña:
 
 ```text
 mala123
+```
+
+Dejar todos los demás campos iguales.
+
+Hacer clic nuevamente en:
+
+```text
+Send
 ```
 
 Resultado esperado:
@@ -265,23 +362,46 @@ Resultado esperado:
 Access-Reject
 ```
 
-## Prueba opcional desde celular
+Esto demuestra que el servidor RADIUS no acepta una contraseña incorrecta.
 
-Además de la prueba con NTRadPing en Windows, también se puede intentar una prueba desde un celular Android usando una aplicación cliente RADIUS.
+**Evidencia recomendada:** tomar captura del resultado `Access-Reject`.
 
-Esta prueba permite comprobar que el servidor TekRADIUS puede recibir solicitudes desde otro dispositivo conectado a la misma red Wi-Fi.
+---
 
-### Requisitos para la prueba desde celular
+# Paso 13: Revisar logs o eventos
 
-- Celular Android conectado a la misma red Wi-Fi que la PC.
-- Una aplicación cliente RADIUS para Android.
-- TekRADIUS LT ejecutándose en Windows.
-- Puerto UDP `1812` permitido en el firewall.
-- IP del celular agregada como cliente RADIUS en TekRADIUS.
+En TekRADIUS Manager, ir a la pestaña:
 
-### Obtener la IP del servidor
+```text
+Events
+```
 
-En la PC donde está instalado TekRADIUS, abrir PowerShell y ejecutar:
+Si no aparecen eventos, revisar la configuración de logs en:
+
+```text
+Settings
+```
+
+También se pueden buscar logs desde PowerShell:
+
+```powershell
+Get-ChildItem "C:\Program Files\TekRADIUS LT" -Recurse -File |
+Where-Object { $_.Extension -in ".log",".txt" } |
+Sort-Object LastWriteTime -Descending |
+Select-Object LastWriteTime, FullName -First 15
+```
+
+**Evidencia recomendada:** tomar captura de eventos, logs o configuración de logging.
+
+---
+
+# Paso 14: Prueba opcional desde celular Android
+
+Esta prueba permite comprobar si el servidor RADIUS puede recibir solicitudes desde otro dispositivo conectado a la misma red Wi-Fi.
+
+## 14.1 Obtener la IP de la PC
+
+En la PC donde está TekRADIUS, ejecutar:
 
 ```powershell
 ipconfig
@@ -295,9 +415,11 @@ Ejemplo:
 192.168.1.50
 ```
 
-Esa será la IP del servidor RADIUS.
+Esta será la IP del servidor RADIUS.
 
-### Obtener la IP del celular
+---
+
+## 14.2 Obtener la IP del celular
 
 En Android, ir a:
 
@@ -305,7 +427,7 @@ En Android, ir a:
 Ajustes > Wi-Fi > Red conectada > Detalles
 ```
 
-Buscar la dirección IP del celular.
+Buscar la IP del celular.
 
 Ejemplo:
 
@@ -313,9 +435,17 @@ Ejemplo:
 192.168.1.80
 ```
 
-### Agregar el celular como cliente RADIUS
+---
 
-En TekRADIUS Manager, ir a la pestaña **Clients** y agregar:
+## 14.3 Agregar el celular como cliente RADIUS
+
+En TekRADIUS Manager, ir a:
+
+```text
+Clients
+```
+
+Agregar un nuevo cliente con estos datos:
 
 | Campo | Valor |
 |---|---|
@@ -332,9 +462,27 @@ Ejemplo:
 | NAS | `192.168.1.80` |
 | Secret | `ClaseRadius123` |
 
-### Configurar la app RADIUS en el celular
+---
 
-En la aplicación cliente RADIUS del celular, configurar:
+## 14.4 Abrir el firewall de Windows
+
+En PowerShell como administrador, ejecutar:
+
+```powershell
+New-NetFirewallRule -DisplayName "Permitir RADIUS UDP 1812" -Direction Inbound -Protocol UDP -LocalPort 1812 -Action Allow
+```
+
+Opcionalmente, abrir también el puerto `1813`:
+
+```powershell
+New-NetFirewallRule -DisplayName "Permitir RADIUS UDP 1813" -Direction Inbound -Protocol UDP -LocalPort 1813 -Action Allow
+```
+
+---
+
+## 14.5 Configurar la app RADIUS en el celular
+
+En la aplicación cliente RADIUS del celular, usar estos datos:
 
 | Campo | Valor |
 |---|---|
@@ -355,56 +503,74 @@ Ejemplo:
 | Username | `estudiante1` |
 | Password | `Clase2026` |
 
-### Resultado esperado desde celular
-
-Con la contraseña correcta, la app debería mostrar una respuesta similar a:
+Resultado esperado:
 
 ```text
 Access-Accept
 ```
 
-Luego se puede hacer una prueba con contraseña incorrecta:
+Luego probar con contraseña incorrecta:
 
 ```text
 mala123
 ```
 
-En ese caso, la respuesta esperada es:
+Resultado esperado:
 
 ```text
 Access-Reject
 ```
 
-### Nota sobre la prueba desde celular
+---
 
-La prueba desde celular puede fallar si:
+## 14.6 Posibles errores en la prueba desde celular
 
-- La red Wi-Fi tiene aislamiento de clientes.
-- El firewall de Windows bloquea el puerto `1812`.
-- La IP del celular no fue agregada como cliente RADIUS.
-- El celular no está en la misma red que la PC.
-- La app RADIUS no usa el mismo método de autenticación.
+| Problema | Posible causa |
+|---|---|
+| No responde | Firewall bloqueando el puerto `1812` |
+| No responde | El celular no está en la misma red |
+| No responde | La red Wi-Fi tiene aislamiento de clientes |
+| Access-Reject | Usuario o contraseña incorrectos |
+| Access-Reject | El celular no fue agregado como cliente RADIUS |
+| Error de secret | El secret no coincide |
 
-Por eso, la prueba principal de esta guía será NTRadPing en Windows, y la prueba con celular queda como prueba complementaria.
+La prueba desde celular es opcional. La prueba principal de la guía es la realizada con NTRadPing.
 
-## Guía completa
+---
 
-La guía detallada se encuentra en:
+# Paso 15: Evidencias finales
 
-[docs/guia-paso-a-paso.md](docs/guia-paso-a-paso.md)
+Al terminar, se recomienda tener estas capturas:
 
-## Conclusión
+| Evidencia | Descripción |
+|---|---|
+| 01 | Carpeta del proyecto creada |
+| 02 | Descarga de TekRADIUS LT |
+| 03 | Instalación de TekRADIUS LT |
+| 04 | Servicio TekRADIUSLT instalado |
+| 05 | Cliente RADIUS creado |
+| 06 | Usuario `estudiante1` creado |
+| 07 | Servicio en estado `Running` |
+| 08 | Puerto `1812/UDP` activo |
+| 09 | Prueba `Access-Accept` |
+| 10 | Prueba `Access-Reject` |
+| 11 | Logs o configuración de TekRADIUS |
+| 12 | Prueba opcional desde celular |
 
-Se logró configurar un servidor RADIUS en Windows 11 usando TekRADIUS LT. La autenticación fue comprobada mediante NTRadPing usando una prueba correcta y una prueba incorrecta.
+---
 
-La respuesta `Access-Accept` confirmó que el usuario válido fue aceptado, mientras que la respuesta `Access-Reject` comprobó que el servidor rechaza credenciales incorrectas.
+# Conclusión
 
-## Autor
+Se configuró un servidor RADIUS en Windows 11 usando TekRADIUS LT.
+
+La prueba con NTRadPing permitió validar el funcionamiento del servidor. Cuando se usó el usuario correcto, el servidor respondió `Access-Accept`. Cuando se usó una contraseña incorrecta, respondió `Access-Reject`.
+
+Esto demuestra que el servidor RADIUS fue configurado correctamente y que puede validar credenciales de usuario.
+
+---
+
+# Autor
 
 Guía elaborada por:
 
 **Kevin Oliveros**
-
-## Estado del proyecto
-
-Servidor RADIUS configurado y probado correctamente usando TekRADIUS LT en Windows 11.
