@@ -13,3 +13,4 @@ En esta carpeta se guardan las capturas tomadas durante la práctica de configur
 7. Prueba Access-Reject.
 8. Logs o configuración de TekRADIUS.
 9. Prueba opcional desde celular.
+
