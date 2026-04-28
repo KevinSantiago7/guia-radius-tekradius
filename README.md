@@ -165,6 +165,8 @@ TekRADIUS LT Manager
 
 3. Ejecutarlo como administrador.
 
+![ejecutar-tek](capturas/ejecutar-tek.png)
+
 ---
 
 # Paso 6: Crear el cliente RADIUS local
