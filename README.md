@@ -244,9 +244,19 @@ Get-Service TekRADIUSLT
 Resultado esperado:
 
 ```text
-Status   Name          DisplayName
-------   ----          -----------
-Running  TekRADIUSLT   TekRADIUSLT
+PS C:\WINDOWS\system32> Start-Service TekRADIUSLT
+ADVERTENCIA: Esperando a que se inicie el servicio 'TekRADIUSLT (TekRADIUSLT)'...
+ADVERTENCIA: Esperando a que se inicie el servicio 'TekRADIUSLT (TekRADIUSLT)'...
+ADVERTENCIA: Esperando a que se inicie el servicio 'TekRADIUSLT (TekRADIUSLT)'...
+ADVERTENCIA: Esperando a que se inicie el servicio 'TekRADIUSLT (TekRADIUSLT)'...
+ADVERTENCIA: Esperando a que se inicie el servicio 'TekRADIUSLT (TekRADIUSLT)'...
+ADVERTENCIA: Esperando a que se inicie el servicio 'TekRADIUSLT (TekRADIUSLT)'...
+PS C:\WINDOWS\system32> Get-Service TekRADIUSLT
+
+Status   Name               DisplayName
+------   ----               -----------
+Running  TekRADIUSLT        TekRADIUSLT
+
 ```
 
 **Evidencia recomendada:** tomar captura del servicio en estado `Running`.
