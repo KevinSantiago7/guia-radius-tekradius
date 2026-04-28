@@ -107,6 +107,9 @@ Proyecto-RADIUS\herramientas
 ```
 
 4. Extraer el archivo `.zip`.
+
+![ejecutar setup](capturas/zip-tek.png)
+
 5. Buscar el archivo:
 
 ```text
