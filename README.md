@@ -462,8 +462,11 @@ Ejemplo:
 
 | Campo | Valor |
 |---|---|
-| NAS | `192.168.1.80` |
+| NAS | `192.168.1.3` |
 | Secret | `ClaseRadius123` |
+
+
+![cliente-cel](capturas/cliente-celular.png)
 
 ---
 
