@@ -503,7 +503,7 @@ Ejemplo:
 
 | Campo | Valor |
 |---|---|
-| Server | `192.168.1.50` |
+| Server | `192.168.1.4` |
 | Port | `1812` |
 | Secret | `ClaseRadius123` |
 | Username | `estudiante1` |
@@ -514,6 +514,8 @@ Resultado esperado:
 ```text
 Access-Accept
 ```
+![cliente-cel](capturas/cel-accept.jpeg)
+
 
 Luego probar con contraseña incorrecta:
 
@@ -526,8 +528,7 @@ Resultado esperado:
 ```text
 Access-Reject
 ```
-
----
+![cliente-cel](capturas/cel-reject.jpeg)
 
 ## 13.6 Posibles errores en la prueba desde celular
 
