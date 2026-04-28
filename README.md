@@ -92,7 +92,7 @@ explorer "$env:USERPROFILE\Desktop\Proyecto-RADIUS"
 
 **Evidencia:**
 
-![Creación de carpetas](capturas/01-Creacion-carpetas.png)
+![Creación de carpetas](capturas/01-Creacion-de-carpetas.png)
 
 ---
 
