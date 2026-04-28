@@ -234,13 +234,6 @@ Abrir **PowerShell como administrador** y ejecutar:
 ```powershell
 Start-Service TekRADIUSLT
 ```
-
-Luego verificar el estado:
-
-```powershell
-Get-Service TekRADIUSLT
-```
-
 Resultado esperado:
 
 ```text
@@ -252,6 +245,19 @@ ADVERTENCIA: Esperando a que se inicie el servicio 'TekRADIUSLT (TekRADIUSLT)'..
 ADVERTENCIA: Esperando a que se inicie el servicio 'TekRADIUSLT (TekRADIUSLT)'...
 ADVERTENCIA: Esperando a que se inicie el servicio 'TekRADIUSLT (TekRADIUSLT)'...
 PS C:\WINDOWS\system32> Get-Service TekRADIUSLT
+
+
+```
+
+Luego verificar el estado:
+
+```powershell
+Get-Service TekRADIUSLT
+```
+
+Resultado esperado:
+
+```text
 
 Status   Name               DisplayName
 ------   ----               -----------
