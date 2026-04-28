@@ -322,7 +322,7 @@ RADDICT.DAT
 
 Ambos archivos deben quedar en la misma carpeta.
 
-![archivos ntradiping](capturas/ntradping.png)
+![archivos ntradiping](capturas/ntrad.png)
 
 
 ---
