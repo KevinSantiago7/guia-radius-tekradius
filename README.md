@@ -156,7 +156,7 @@ Si aparece `TekRADIUSLT`, significa que el servicio fue instalado correctamente.
 
 # Paso 5: Abrir TekRADIUS Manager
 
-1. Abrir el menú de inicio.
+1. Abrir el menú de inicio o en el escritorio.
 2. Buscar:
 
 ```text
@@ -192,7 +192,7 @@ Completar los campos así:
 
 Luego hacer clic en el botón verde **+** para agregar el cliente.
 
-**Evidencia recomendada:** tomar captura del cliente creado.
+![crear cliente](capturas/05-registro-de-cliente.png)
 
 ---
 
@@ -230,7 +230,7 @@ En la parte derecha, agregar el atributo de contraseña:
 
 Hacer clic en el botón verde **+** para guardar el atributo.
 
-**Evidencia recomendada:** tomar captura del usuario creado.
+![crear usuario](capturas/06-registrar-usuario.png)
 
 ---
 
@@ -271,7 +271,7 @@ Running  TekRADIUSLT        TekRADIUSLT
 
 ```
 
-**Evidencia recomendada:** tomar captura del servicio en estado `Running`.
+![running](capturas/07-servicion-running.png)
 
 ---
 
@@ -349,7 +349,7 @@ Access-Accept
 
 Esto significa que el servidor RADIUS aceptó el usuario y la contraseña.
 
-**Evidencia recomendada:** tomar captura del resultado `Access-Accept`.
+![access accept](capturas/08-access-accept.png)
 
 ---
 
@@ -377,7 +377,7 @@ Access-Reject
 
 Esto demuestra que el servidor RADIUS no acepta una contraseña incorrecta.
 
-**Evidencia recomendada:** tomar captura del resultado `Access-Reject`.
+![access reject](capturas/09-access-reject.png)
 
 ---
 
