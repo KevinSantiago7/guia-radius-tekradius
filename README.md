@@ -1,6 +1,13 @@
 # Guía paso a paso: Configuración de un servidor RADIUS en Windows 11 usando TekRADIUS LT
 
-## 1. Objetivo de la práctica
+# Autor
+
+**Kevin Santiago Oliveros Realpe**  
+Universidad del Cauca  
+Facultad de Ingeniería Electrónica y Telecomunicaciones  
+FIET
+
+## 1. Objetivo
 
 Configurar un servidor RADIUS en Windows 11, crear un usuario de prueba y validar la autenticación usando una herramienta cliente llamada **NTRadPing** y opcionalmente validar también la autenticación usando una herramienta para celular llamada **Simple Radius Test Tool**
 
