@@ -66,7 +66,7 @@ Los archivos necesarios estarán disponibles desde Google Drive.
 | Método de autenticación | `PAP` |
 
 ---
-
+# GUIA PASO A PASO
 # Paso 1: Crear la carpeta del proyecto
 
 Abrir **PowerShell** y ejecutar:
