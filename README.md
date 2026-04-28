@@ -291,7 +291,7 @@ También se puede verificar el puerto de accounting:
 netstat -ano -p udp | findstr ":1813"
 ```
 
-**Evidencia recomendada:** tomar captura del puerto activo.
+![puerto activo](capturas/puerto-activo.png)
 
 ---
 
