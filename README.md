@@ -4,7 +4,6 @@
 
 Esta guía explica cómo instalar, configurar y probar un servidor RADIUS en Windows 11 usando **TekRADIUS LT**.
 
-El objetivo es que otro estudiante pueda seguir estos pasos durante una clase y comprobar que el servidor funciona correctamente mediante una prueba de autenticación.
 
 ---
 
