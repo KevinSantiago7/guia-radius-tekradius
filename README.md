@@ -1,19 +1,12 @@
 # Guía paso a paso: Configuración de un servidor RADIUS en Windows 11 usando TekRADIUS LT
 
-## 1. Descripción
-
-Esta guía explica cómo instalar, configurar y probar un servidor RADIUS en Windows 11 usando **TekRADIUS LT**.
-
-
----
-
-## 2. Objetivo de la práctica
+## 1. Objetivo de la práctica
 
 Configurar un servidor RADIUS en Windows 11, crear un usuario de prueba y validar la autenticación usando una herramienta cliente llamada **NTRadPing** y opcionalmente validar también la autenticación usando una herramienta para celular llamada **Simple Radius Test Tool**
 
 ---
 
-## 3. ¿Qué es un servidor RADIUS?
+## 2. ¿Qué es un servidor RADIUS?
 
 RADIUS significa **Remote Authentication Dial-In User Service**.
 
@@ -33,7 +26,7 @@ Significa que el acceso fue rechazado.
 
 ---
 
-## 4. Herramientas necesarias
+## 3. Herramientas necesarias
 
 | Herramienta | Uso |
 |---|---|
@@ -46,15 +39,15 @@ Significa que el acceso fue rechazado.
 
 ---
 
-## 5. Links de descarga
+## 4. Links de descarga
 
 Los archivos necesarios estarán disponibles desde Google Drive.
 
 | Programa | Enlace |
 |---|---|
-| TekRADIUS LT | [Descargar desde Drive](PEGAR_AQUI_LINK_DE_TEKRADIUS) |
-| NTRadPing | [Descargar desde Drive](PEGAR_AQUI_LINK_DE_NTRADPING) |
-| App RADIUS para Android | [Descargar desde Drive](PEGAR_AQUI_LINK_DE_APP_ANDROID) |
+| TekRADIUS LT | [Descargar desde Drive](https://drive.google.com/file/d/109W8xu_Pmqqwl8Kv9l31GhKeWijp_7EK/view?usp=sharing) |
+| NTRadPing | [Descargar desde Drive](https://drive.google.com/file/d/16Bg0l-koklsOB2lFg3iwMZRot9bm3rEf/view?usp=sharing) |
+| App RADIUS para Android | [Descargar desde Drive](https://drive.google.com/file/d/1Hh4-s9F50ep79cnJT78rcGjN1gNZOR-6/view?usp=sharing) |
 
 > Reemplazar `PEGAR_AQUI_LINK...` por los enlaces reales de Google Drive.
 
