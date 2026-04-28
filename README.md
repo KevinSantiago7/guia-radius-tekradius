@@ -52,7 +52,7 @@ Los archivos necesarios estarán disponibles desde Google Drive.
 
 ---
 
-## 6. Datos que se usarán en la práctica
+##5. Datos que se usarán en la práctica
 
 | Elemento | Valor |
 |---|---|
