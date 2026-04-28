@@ -90,7 +90,9 @@ Abrir la carpeta:
 explorer "$env:USERPROFILE\Desktop\Proyecto-RADIUS"
 ```
 
-**Evidencia recomendada:** tomar captura de la carpeta creada.
+**Evidencia:**
+
+![Creación de carpetas](capturas/01-Creacion-carpetas.png)
 
 ---
 
