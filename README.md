@@ -527,9 +527,7 @@ La prueba desde celular es opcional. La prueba principal de la guía es la reali
 
 # Autor
 
-Guía elaborada por:
-
-**Kevin Santiago Oliveros Realpe**
-**UNIVERSIDAD DEL CAUCA**
-**Facultad de Ingenieria Electronica y Telecomunicaciones**
-**FIET**
+**Kevin Santiago Oliveros Realpe**  
+Universidad del Cauca  
+Facultad de Ingeniería Electrónica y Telecomunicaciones  
+FIET
