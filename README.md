@@ -423,8 +423,14 @@ En Android, ir a:
 ```text
 Ajustes > Wi-Fi > Red conectada > Detalles
 ```
+o
+```text
+Ajustes > Wi-Fi > Preferencias de WiFi> Direccion IP
+```
 
 Buscar la IP del celular.
+
+![ip-cel](capturas/ip-cel.png)
 
 Ejemplo:
 
