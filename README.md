@@ -128,7 +128,7 @@ Setup.exe
 4. Aceptar las opciones por defecto.
 5. Finalizar la instalación.
 
-**Evidencia recomendada:** tomar captura del instalador.
+![ejecutar setup](capturas/03-instalar-tek.png)
 
 ---
 
