@@ -9,7 +9,7 @@ Esta guía explica cómo instalar, configurar y probar un servidor RADIUS en Win
 
 ## 2. Objetivo de la práctica
 
-Configurar un servidor RADIUS en Windows 11, crear un usuario de prueba y validar la autenticación usando una herramienta cliente llamada **NTRadPing**.
+Configurar un servidor RADIUS en Windows 11, crear un usuario de prueba y validar la autenticación usando una herramienta cliente llamada **NTRadPing** y opcionalmente validar también la autenticación usando una herramienta para celular llamada **Simple Radius Test Tool**
 
 ---
 
