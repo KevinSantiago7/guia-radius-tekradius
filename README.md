@@ -404,10 +404,12 @@ ipconfig
 
 Buscar la dirección IPv4 del adaptador Wi-Fi.
 
+![ip-pc](capturas/ip-pc.png)
+
 Ejemplo:
 
 ```text
-192.168.1.50
+192.168.1.4
 ```
 
 Esta será la IP del servidor RADIUS.
