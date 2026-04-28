@@ -541,8 +541,6 @@ Access-Reject
 | Access-Reject | El celular no fue agregado como cliente RADIUS |
 | Error de secret | El secret no coincide |
 
-La prueba desde celular es opcional. La prueba principal de la guía es la realizada con NTRadPing.
-
 ---
 
 # Autor
