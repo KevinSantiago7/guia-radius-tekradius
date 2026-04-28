@@ -379,40 +379,14 @@ Esto demuestra que el servidor RADIUS no acepta una contraseña incorrecta.
 
 ![access reject](capturas/09-access-reject.png)
 
----
-
-# Paso 13: Revisar logs o eventos
-
-En TekRADIUS Manager, ir a la pestaña:
-
-```text
-Events
-```
-
-Si no aparecen eventos, revisar la configuración de logs en:
-
-```text
-Settings
-```
-
-También se pueden buscar logs desde PowerShell:
-
-```powershell
-Get-ChildItem "C:\Program Files\TekRADIUS LT" -Recurse -File |
-Where-Object { $_.Extension -in ".log",".txt" } |
-Sort-Object LastWriteTime -Descending |
-Select-Object LastWriteTime, FullName -First 15
-```
-
-**Evidencia recomendada:** tomar captura de eventos, logs o configuración de logging.
 
 ---
 
-# Paso 14: Prueba opcional desde celular Android
+# Paso 13: Prueba opcional desde celular Android
 
 Esta prueba permite comprobar si el servidor RADIUS puede recibir solicitudes desde otro dispositivo conectado a la misma red Wi-Fi.
 
-## 14.1 Obtener la IP de la PC
+## 13.1 Obtener la IP de la PC
 
 En la PC donde está TekRADIUS, ejecutar:
 
@@ -432,7 +406,7 @@ Esta será la IP del servidor RADIUS.
 
 ---
 
-## 14.2 Obtener la IP del celular
+## 13.2 Obtener la IP del celular
 
 En Android, ir a:
 
@@ -450,7 +424,7 @@ Ejemplo:
 
 ---
 
-## 14.3 Agregar el celular como cliente RADIUS
+## 13.3 Agregar el celular como cliente RADIUS
 
 En TekRADIUS Manager, ir a:
 
@@ -477,7 +451,7 @@ Ejemplo:
 
 ---
 
-## 14.4 Abrir el firewall de Windows
+## 13.4 Abrir el firewall de Windows
 
 En PowerShell como administrador, ejecutar:
 
@@ -493,7 +467,7 @@ New-NetFirewallRule -DisplayName "Permitir RADIUS UDP 1813" -Direction Inbound -
 
 ---
 
-## 14.5 Configurar la app RADIUS en el celular
+## 13.5 Configurar la app RADIUS en el celular
 
 En la aplicación cliente RADIUS del celular, usar estos datos:
 
@@ -536,7 +510,7 @@ Access-Reject
 
 ---
 
-## 14.6 Posibles errores en la prueba desde celular
+## 13.6 Posibles errores en la prueba desde celular
 
 | Problema | Posible causa |
 |---|---|
@@ -551,39 +525,11 @@ La prueba desde celular es opcional. La prueba principal de la guía es la reali
 
 ---
 
-# Paso 15: Evidencias finales
-
-Al terminar, se recomienda tener estas capturas:
-
-| Evidencia | Descripción |
-|---|---|
-| 01 | Carpeta del proyecto creada |
-| 02 | Descarga de TekRADIUS LT |
-| 03 | Instalación de TekRADIUS LT |
-| 04 | Servicio TekRADIUSLT instalado |
-| 05 | Cliente RADIUS creado |
-| 06 | Usuario `estudiante1` creado |
-| 07 | Servicio en estado `Running` |
-| 08 | Puerto `1812/UDP` activo |
-| 09 | Prueba `Access-Accept` |
-| 10 | Prueba `Access-Reject` |
-| 11 | Logs o configuración de TekRADIUS |
-| 12 | Prueba opcional desde celular |
-
----
-
-# Conclusión
-
-Se configuró un servidor RADIUS en Windows 11 usando TekRADIUS LT.
-
-La prueba con NTRadPing permitió validar el funcionamiento del servidor. Cuando se usó el usuario correcto, el servidor respondió `Access-Accept`. Cuando se usó una contraseña incorrecta, respondió `Access-Reject`.
-
-Esto demuestra que el servidor RADIUS fue configurado correctamente y que puede validar credenciales de usuario.
-
----
-
 # Autor
 
 Guía elaborada por:
 
-**Kevin Oliveros**
+**Kevin Santiago Oliveros Realpe**
+**UNIVERSIDAD DEL CAUCA**
+**Facultad de Ingenieria Electronica y Telecomunicaciones**
+**FIET**
