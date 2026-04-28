@@ -45,11 +45,10 @@ Los archivos necesarios estarán disponibles desde Google Drive.
 
 | Programa | Enlace |
 |---|---|
-| TekRADIUS LT | [Descargar desde Drive](https://drive.google.com/file/d/109W8xu_Pmqqwl8Kv9l31GhKeWijp_7EK/view?usp=sharing) |
-| NTRadPing | [Descargar desde Drive](https://drive.google.com/file/d/16Bg0l-koklsOB2lFg3iwMZRot9bm3rEf/view?usp=sharing) |
-| App RADIUS para Android | [Descargar desde Drive](https://drive.google.com/file/d/1Hh4-s9F50ep79cnJT78rcGjN1gNZOR-6/view?usp=sharing) |
+| TekRADIUS LT | [Descargar](https://drive.google.com/file/d/109W8xu_Pmqqwl8Kv9l31GhKeWijp_7EK/view?usp=sharing) |
+| NTRadPing | [Descargar](https://drive.google.com/file/d/16Bg0l-koklsOB2lFg3iwMZRot9bm3rEf/view?usp=sharing) |
+| App RADIUS para Android | [Descargar](https://drive.google.com/file/d/1Hh4-s9F50ep79cnJT78rcGjN1gNZOR-6/view?usp=sharing) |
 
-> Reemplazar `PEGAR_AQUI_LINK...` por los enlaces reales de Google Drive.
 
 ---
 
