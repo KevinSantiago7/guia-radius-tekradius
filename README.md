@@ -108,7 +108,7 @@ Proyecto-RADIUS\herramientas
 
 4. Extraer el archivo `.zip`.
 
-![ejecutar setup](capturas/zip-tek.png)
+![Extraer_zip](capturas/zip-tek.png)
 
 5. Buscar el archivo:
 
@@ -128,7 +128,7 @@ Setup.exe
 4. Aceptar las opciones por defecto.
 5. Finalizar la instalación.
 
-![ejecutar setup](capturas/03-instalar-tek.png)
+![instalador TekRadius](capturas/03-instalar-tek.png)
 
 ---
 
@@ -150,7 +150,7 @@ Stopped  TekRADIUSLT   TekRADIUSLT
 
 Si aparece `TekRADIUSLT`, significa que el servicio fue instalado correctamente.
 
-**Evidencia recomendada:** tomar captura del resultado.
+![instalacion correcta](capturas/03-instalar-tek.png)
 
 ---
 
