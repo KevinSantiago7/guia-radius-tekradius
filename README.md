@@ -150,7 +150,7 @@ Stopped  TekRADIUSLT   TekRADIUSLT
 
 Si aparece `TekRADIUSLT`, significa que el servicio fue instalado correctamente.
 
-![instalacion correcta](capturas/03-instalar-tek.png)
+![instalacion correcta](capturas/servicio-instalado.png)
 
 ---
 
