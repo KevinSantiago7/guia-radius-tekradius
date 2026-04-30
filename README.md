@@ -13,27 +13,8 @@ Configurar un servidor RADIUS en Windows 11, crear un usuario de prueba y valida
 
 ---
 
-## 2. ¿Qué es un servidor RADIUS?
 
-RADIUS significa **Remote Authentication Dial-In User Service**.
-
-Un servidor RADIUS permite validar usuarios que intentan acceder a una red o servicio. El servidor recibe una solicitud con usuario y contraseña, revisa si los datos son correctos y responde con uno de estos resultados:
-
-```text
-Access-Accept
-```
-
-Significa que el acceso fue permitido.
-
-```text
-Access-Reject
-```
-
-Significa que el acceso fue rechazado.
-
----
-
-## 3. Herramientas necesarias
+## 2. Herramientas necesarias
 
 | Herramienta | Uso |
 |---|---|
@@ -46,7 +27,7 @@ Significa que el acceso fue rechazado.
 
 ---
 
-## 4. Links de descarga
+## 3. Links de descarga
 
 Los archivos necesarios estarán disponibles desde Google Drive.
 
@@ -59,7 +40,7 @@ Los archivos necesarios estarán disponibles desde Google Drive.
 
 ---
 
-## 5. Datos que se usarán en la práctica
+## 4. Datos que se usarán en la práctica
 
 | Elemento | Valor |
 |---|---|
