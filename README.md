@@ -29,7 +29,7 @@ Configurar un servidor RADIUS en Windows 11, crear un usuario de prueba y valida
 
 ## 3. Links de descarga
 
-Los archivos necesarios estarán disponibles desde Google Drive.
+Los archivos necesarios estarán disponibles desde Google Drive. (Descargar toda la carpeta ZIP)
 
 | Programa | Enlace |
 |---|---|
